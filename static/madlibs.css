@@ -1,0 +1,36 @@
+body {
+    background-color: #e5e5e5;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: Arial;
+    color: blueviolet;
+}
+
+div {
+    background-color: cadetblue;
+    width: 50%;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+form {
+    padding-left: 50px;
+}
+
+input[type=submit] {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(226, 115, 107);
+}
