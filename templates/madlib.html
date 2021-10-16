@@ -1,16 +1,13 @@
-<!doctype html>
-<html>
-<head>
-  <title>A Compliment</title>
-  <link rel="stylesheet" href="/static/madlibs.css">
-</head>
-<body>
-    <h1>Madlibs</h1>
+{% extends 'base.html' %}
 
-    <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
-    When {{ person }} went to pick it up, it burst into flames in a totally
-    {{ adjective }} way. The lab instructor stood at the front of the class with the 
-    class {{animal}} and laughed. Everyone else finished eating their {{ food }} which was served for 
-    lunch that day.</p>
-</body>
-</html>
+{% block title %}Madlibs Story{% endblock %}
+
+{% block header %}Madlibs Story{% endblock %}
+
+{% block content %}
+<p>There once was a {{ adjective3 }} {{ color }} {{ noun1 }} {{pasttenseverb3}} in the Hackbright Lab, at {{ place }}.</p>
+<p>When {{ person }} went to pick it up so they could {{verb2}} away with it, it burst into flames in a totally {{ adjective1 }} way. I was so shocked that I {{verb3}} back to my seat.</p>
+<p>The lab instructor was {{pasttenseverb2}} at the front of the class with the {{ adjective2 }} class {{ animal }} and the lab assistant was {{ pasttenseverb1 }} next to them.</p>
+<p>Everyone else finished eating their {{ food }} which was served with a {{noun2}} for lunch that day.</p>
+<p>Feeling embarassed, I grabbed my {{noun3}} and {{verb1}} to my {{vehicle}}.</p>
+{% endblock %}

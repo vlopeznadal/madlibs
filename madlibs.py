@@ -61,17 +61,32 @@ def show_madlib_form():
     elif response == "no":
         return render_template("goodbye.html")
 
-@app.route("/madlib")
+@app.route("/madlib", methods=['POST'])
 def show_madlib():
 
-    person = request.args.get("person")
-    color = request.args.get("color")
-    noun = request.args.get("noun")
-    adjective = request.args.get("adjective")
-    animal = request.args.get("animal")
-    food = request.args.get("food")
+    person = request.form.get("person")
+    color = request.form.get("color")
+    noun1 = request.form.get("noun1")
+    noun2 = request.form.get("noun2")
+    noun3 = request.form.get("noun3")
+    adjective1 = request.form.get("adjective1")
+    adjective2 = request.form.get("adjective2")
+    adjective3 = request.form.get("adjective3")
+    animal = request.form.get("animal")
+    food = request.form.get("food")
+    verb1 = request.form.get("verb1")
+    verb2 = request.form.get("verb2")
+    verb3 = request.form.get("verb3")
+    pasttenseverb1 = request.form.get("pasttenseverb1")
+    pasttenseverb2 = request.form.get("pasttenseverb2")
+    pasttenseverb3 = request.form.get("pasttenseverb3")
+    place = request.form.get("place")
+    vehicle = request.form.get("vehicle")
 
-    return render_template("madlib.html", person=person, color=color, noun=noun, adjective=adjective, animal=animal, food=food)
+    temps = ["madlib.html", "madlib-2.html", "madlib-3.html"]
+    rand_templates = choice(temps)
+
+    return render_template(rand_templates, person=person, color=color, noun1=noun1, noun2=noun2, noun3=noun3, adjective1=adjective1, adjective2=adjective2, adjective3=adjective3, animal=animal, food=food, verb1=verb1, verb2=verb2, verb3=verb3, pasttenseverb1=pasttenseverb1, pasttenseverb2=pasttenseverb2, pasttenseverb3=pasttenseverb3,place=place, vehicle=vehicle)
 
 if __name__ == "__main__":
     # Setting debug=True gives us error messages in the browser and also

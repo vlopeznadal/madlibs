@@ -6,6 +6,7 @@ h1 {
     font-size: 48px;
     font-family: Arial;
     color: blueviolet;
+    padding-left: 50px;
 }
 
 div {
@@ -17,7 +18,12 @@ div {
 
 p {
     font-size: 18px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 50px;
+}
+
+div p {
+    padding-left: 0;
 }
 
 ul {

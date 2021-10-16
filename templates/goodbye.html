@@ -1,9 +1,9 @@
-<!doctype html>
-<html>
-<head>
-  <title>Goodbye</title>
-</head>
-<body>
-    Bummer that you don't want to play, {{ player }}. Maybe next time!
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Goodbye{% endblock %}
+
+{% block header %}Goodbye!{% endblock %}
+
+{% block content %}
+  <p>Bummer that you don't want to play. Maybe next time!</p>
+{% endblock %}
